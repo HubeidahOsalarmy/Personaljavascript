@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="mass" placeholder="enter mass"/>
+    <input id="gravity" placeholder="enter gravity"/>
+    <button>Calc weight</button>
+    <p id="result"></p>
+    <script>
+        const massInput = document.querySelector("#mass")
+        const gravityInput = document.querySelector("#gravity")
+        const button = document.querySelector("button")
+        button.addEventListener("click", () => {
+         let mass = Number(massInput.value)
+         let gravity = Number(gravityInput.value)
+         const weight = mass * gravity
+         let p = document.querySelector("#result")
+         if (mass==0||weight==0){
+            p.textContent=`Enter a number`
+         } else {
+            p.textContent =`The weight of an object ${mass}kg with gravity ${gravity} is ${Math.round(weight)}N.` 
+        }
+        
+         })
+   </script>
+</body>
+</html>

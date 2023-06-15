@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input />  <button>Calculate</button>
+    <p id="result"></p>
+    <input class="mass" placeholder="enter mass"/>
+    <input class="gravity" placeholder="enter gravity"/>
+    <button>Calc weight</button>
+    <p id="result"></p>
+    <script>
+        const input = document.querySelector("input")
+        const button = document.querySelector("button")
+   
+   
+        //appear as a popup on the browser(clicked)
+        //button.addEventListener("mouseenter", () => {
+         //alert("clicked")
+        //})
+   
+   
+   
+        //appear as a popup on the browser(area)
+       // button.addEventListener("click", () => {
+        // let radius = Number(input.value)
+         //let area = Math.PI * radius ** 2
+         //alert(area)
+        //})
+   
+   
+   
+         //appear below 3rd paragraph
+         /*button.addEventListener("click", () => {
+         let radius = Number(input.value)
+         let area = Math.PI * radius ** 2
+         let pArea = document.createElement("p")
+         pArea.textContent = area
+         document.body.appendChild(pArea)
+         })*/
+   
+         //will appear just below the input box
+         button.addEventListener("click", () => {
+         let radius = Number(input.value)
+         let area = Math.PI * radius ** 2
+         let pArea = document.querySelector("#result")
+         pArea.textContent = area
+         })
+   
+         button.addEventListener("click", () => {
+         let radius = Number(input.value)
+         let area = Math.PI * radius ** 2
+         let pArea = document.querySelector("#result")
+         if (radius==0){
+            pArea.textContent = "Please fill in the text area with a number"
+         }else {
+            pArea.textContent =`The area of a circle with radius ${radius} is ${Math.round(area)} square meter.` 
+         }
+        
+         })
+   /*
+         button.addEventListener("click", () => {
+         let mass = Number(input.value)
+         let gravity = Number(input.value)
+         let p = document.querySelector("#result")
+        
+            p.textContent =`The weight of a mass ${mass} with gravity ${gravity} is ${Math.round(weight)}kgm/s.` 
+         
+        
+         })*/
+   </script>
+</body>
+</html>

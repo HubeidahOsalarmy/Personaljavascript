@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom creating</title>
+</head>
+<body>
+    <input />  <button>Calculate</button>
+    <p id="result"></p>
+    <input class="mass" placeholder="enter mass"/>
+    <input class="gravity" placeholder="enter gravity"/>
+    <button>Cal weight</button>
+    <p id="result"></p>
+
+
+    <script>
+     const input = document.querySelector("input")
+     const button = document.querySelector("button")
+
+
+     //appear as a popup on the browser(clicked)
+     //button.addEventListener("mouseenter", () => {
+      //alert("clicked")
+     //})
+
+
+
+     //appear as a popup on the browser(area)
+    // button.addEventListener("click", () => {
+     // let radius = Number(input.value)
+      //let area = Math.PI * radius ** 2
+      //alert(area)
+     //})
+
+
+
+      //appear below 3rd paragraph
+      /*button.addEventListener("click", () => {
+      let radius = Number(input.value)
+      let area = Math.PI * radius ** 2
+      let pArea = document.createElement("p")
+      pArea.textContent = area
+      document.body.appendChild(pArea)
+      })*/
+
+      //will appear just below the input box
+      button.addEventListener("click", () => {
+      let radius = Number(input.value)
+      let area = Math.PI * radius ** 2
+      let pArea = document.querySelector("#result")
+      pArea.textContent = area
+      })
+
+      button.addEventListener("click", () => {
+      let radius = Number(input.value)
+      let area = Math.PI * radius ** 2
+      let pArea = document.querySelector("#result")
+      if (radius==0){
+         pArea.textContent = "Please fill in the text area with a number"
+      }else {
+         pArea.textContent =`The area of a circle with radius ${radius} is ${Math.round(area)} square meter.` 
+      }
+     
+      })
+
+      button.addEventListener("click", () => {
+      let mass = Number(input.value)
+      let gravity = Number(input.value)
+      let p = document.querySelector("#result")
+     
+         p.textContent =`The weight of a mass ${mass} with gravity ${gravity} is ${Math.round(weight)}kgm/s.` 
+      
+     
+      })
+
+      const title = `ISLAM AS A RELIGION`;
+      const h1 = document.createElement(`h1`);
+      h1.textContent = title;
+      document.body.appendChild(h1)
+
+      const txt = `Islam is a religion of peace, unity and bliss. Anything other than goodness that the media associates with the islamic religion is nothing but lies.`;
+     const p = document.createElement(`p`);
+      p.textContent = txt;
+     document.body.appendChild(p)
+     
+     const txt2 = ` In Islam, we serve the only one true God who is Allah Azawajal. Our prophet (peace be upon him) is Muhammed (s.a.w), our holy book is Al-quran kareem`;
+     const para = document.createElement(`p`);
+      para.textContent = txt2;
+      para.className = `para`
+     document.body.appendChild(para)
+
+
+     const txt3 = `For you to be regarded as a muslim, you have to believe in the oneness of Allah, believe in the prophet Muhammed (s.a.w) and other prophets sent by Allah azawajal, their holy books and the day of judgement.`;
+     const parag = document.createElement(`p`);
+      parag.textContent = txt3;
+      parag.className = `para`
+      parag.idName = `parag`
+      parag.setAttribute = ("txt3", "I AM A PARAGRAPH")
+     document.body.appendChild(parag)
+     
+//time
+
+     //let count = 0 
+    // setInterval(() => {
+     //   console.log(count)
+     //   count ++
+     //},1000)
+     //clearInterval(interval)
+
+    </script>
+      
+
+    <!--<p class="para">
+        In Islam, we serve the only one true God who is Allah Azawajal. Our prophet (peace be upon him) is Muhammed (s.a.w), our holy book is Al-quran kareem
+     </p>
+     <p class="para" id="para">
+        For you to be regarded as a muslim, you have to believe in the oneness of Allah, believe in the prophet Muhammed (s.a.w) and other prophets sent by Allah azawajal, their holy books and the day of judgement.
+     </p> -->
+</body>
+</html>
